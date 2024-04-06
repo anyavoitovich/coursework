@@ -1,81 +1,71 @@
 /* Обнуление стилей */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .search-container {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .search-container input[type="text"] {
-    padding: 10px;
-    width: 60%;
-    margin-right: 10px;
-  }
-  
-  .search-container button {
-    padding: 10px 20px;
-    background-color: #ffcc00;
-    color: #333;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .search-container button:hover {
-    background-color: #ffc800;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* Стили для страницы с вакансиями */
-  .filters {
-    margin-bottom: 20px;
-  }
-  
-  .vacancy-list {
-    list-style-type: none;
-  }
-  
-  .vacancy-list li {
-    margin-bottom: 10px;
-  }
-  
-  .vacancy-list a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-  }
-  
-  .vacancy-list a:hover {
-    color: #ffcc00;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Чтобы footer всегда был внизу страницы */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex; /* Добавляем flex-контейнер */
+  justify-content: center; /* Выравниваем по центру по горизонтали */
+  align-items: center; /* Выравниваем по центру по вертикали */
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  width: 500px;
+  margin-right: 10px;
+  border-radius: 20px; /* Закругляем углы */
+  border: 1px solid #ccc; /* Добавляем рамку */
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 20px; /* Закруглим границы поисковой строки и кнопки */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.search-container button:hover {
+  background-color: #ffc800;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto; /* Поднимаем footer вниз страницы */
+}
