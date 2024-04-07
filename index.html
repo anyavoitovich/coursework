@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Подбор персонала</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script> <!-- добавляем defer для отложенной загрузки -->
 </head>
 <body>
   <header>
     <h1>Подбор персонала</h1>
+    <label class="switch">
+      <input id="themeToggle" type="checkbox" onclick="toggleTheme()">
+      <span class="slider round"></span>
+    </label>
   </header>
   
   <main>

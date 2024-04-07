@@ -1,0 +1,146 @@
+/* Обнуление стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh; /* Чтобы footer всегда был внизу страницы */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex; /* Добавляем flex контейнер */
+    justify-content: space-between; /* Равномерно распределяем элементы по контейнеру */
+    align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex; /* Добавляем flex-контейнер */
+    justify-content: center; /* Выравниваем по центру по горизонтали */
+    align-items: center; /* Выравниваем по центру по вертикали */
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    width: 500px;
+    margin-right: 10px;
+    border-radius: 20px; /* Закругляем углы */
+    border: 1px solid #ccc; /* Добавляем рамку */
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 20px; /* Закруглим границы поисковой строки и кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-container button:hover {
+    background-color: #ffc800;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Поднимаем footer вниз страницы */
+}
+.dark-theme {
+  background-color: #222;
+  color: #fff;
+}
+
+.switch-container {
+  margin-left: auto; /* Перемещаем переключатель в самый правый угол */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Уменьшаем размер переключателя */
+  height: 20px; /* Уменьшаем размер переключателя */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 20px; /* Радиус ползунка */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Уменьшаем размер ползунка */
+  width: 16px; /* Уменьшаем размер ползунка */
+  left: 2px;
+  bottom: 2px;
+  background-color: black; /* Устанавливаем начальный цвет ползунка */
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px); /* Увеличиваем смещение ползунка */
+  -ms-transform: translateX(20px); /* Увеличиваем смещение ползунка */
+  transform: translateX(20px); /* Увеличиваем смещение ползунка */
+  background-color: white; /* Меняем цвет ползунка */
+}
+
+.slider.round {
+  border-radius: 20px; /* Радиус ползунка */
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
