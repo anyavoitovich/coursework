@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>уборщик</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/vacancies.css">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-top">
+        <button class="animated-button">Button 1</button>
+        <button class="animated-button">Button 2</button>
+        <button class="animated-button">Button 3</button>
+        <button class="animated-button">Button 4</button>
+        <button class="animated-button">Button 5</button>
+        <label class="switch">
+          <input id="themeToggle" type="checkbox" onclick="toggleTheme()">
+          <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="navbar-bottom">
+        <button class="animated-button">Button 1</button>
+        <button class="animated-button">Button 2</button>
+        <button class="animated-button">Button 3</button>
+        <button class="animated-button">Button 4</button>
+        <button class="animated-button">Button 5</button>
+        <button class="animated-button">Button 6</button>
+        <button class="animated-button">Button 7</button>
+    </div>
+  </nav>
+  <main>
+
+        
+
+      
+      <ul class="vacancy-list">
+        <li>
+          <div class="vacancy">
+            <img src="vacancy1.jpg" alt="Вакансия 1">
+            <div class="info">
+              <h2>Вакансия 1</h2>
+              <p>Краткое содержание описания вакансии...</p>
+              <div class="tags">
+                <span class="tag">Тег1</span>
+                <span class="tag">Тег2</span>
+              </div>
+            </div>
+            <a href="#" class="apply-btn">Подробнее</a>
+          </div>
+        </li>
+        
+        <li>
+          <div class="vacancy">
+            <img src="vacancy2.jpg" alt="Вакансия 2">
+            <div class="info">
+              <h2>Вакансия 2</h2>
+              <p>Краткое содержание описания вакансии...</p>
+              <div class="tags">
+                <span class="tag">Тег3</span>
+                <span class="tag">Тег4</span>
+              </div>
+            </div>
+            <a href="#" class="apply-btn">Подробнее</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </main>
+    
+    <footer>
+      <p>&copy; 2024 Подбор персонала</p>
+    </footer>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/filter-sort.js"></script>
+  </body>
+  </html>

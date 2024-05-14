@@ -18,14 +18,7 @@
   </header>
   
   <main>
-    <div class="sort">
-      <!-- Переместите элементы сортировки вверх -->
-      <select id="sortSelect">
-        <option value="default">По умолчанию</option>
-        <option value="name">По названию</option>
-        <option value="date">По дате</option>
-      </select>
-    </div>
+
     <div class="container">
       <div class="filters">
         <h3>Фильтры</h3>
@@ -44,21 +37,48 @@
           <option value="saint-petersburg">Санкт-Петербург</option>
           <option value="other">Другой город</option>
         </select>
+        <h2>Регион</h2>
+        <label><input type="checkbox" name="region" value="Москва"> Москва (2 550 956)</label><br>
+        <label><input type="checkbox" name="region" value="Московская область"> Московская область (658 448)</label><br>
+
+        <h2>Район</h2>
+        <label><input type="checkbox" name="district" value="Академический"> Академический (8 847)</label><br>
+        <label><input type="checkbox" name="district" value="Алексеевский"> Алексеевский (30 494)</label><br>
+        <label><input type="checkbox" name="district" value="Алтуфьевский"> Алтуфьевский (462)</label><br>
+        <label><input type="checkbox" name="district" value="Арбат"> Арбат (3 134)</label><br>
+        <label><input type="checkbox" name="district" value="Аэропорт"> Аэропорт (10 932)</label><br>
+        <!-- Показать еще районы -->
+
+        <h2>Переезд</h2>
+        <label><input type="radio" name="relocation" value="Живут_или_готовы_переехать"> Живут или готовы переехать в регион</label><br>
+        <label><input type="radio" name="relocation" value="Живут_в_регионе"> Живут в регионе</label><br>
+        <label><input type="radio" name="relocation" value="Готовы_уехать_из_региона"> Готовы уехать из региона</label><br>
+        <label><input type="radio" name="relocation" value="Не_живут_но_готовы_переехать_в_регион"> Не живут, но готовы переехать в регион</label><br>
+
+        <!-- Другие параметры и категории могут быть добавлены здесь -->
       </div>
       
       <ul class="vacancy-list">
         <li>
           <div class="vacancy">
-            <img src="vacancy1.jpg" alt="Вакансия 1">
+            <div class="carousel">
+              <div class="carousel-slide">
+                  <img src="img/1.jpeg" alt="Image 1">
+              </div>
+              <div class="carousel-slide">
+                  <img src="img/2.jpg" alt="Image 2">
+              </div>
+          </div>          
             <div class="info">
-              <h2>Вакансия 1</h2>
+              <h2>менеджер по продажам</h2>
+              <h4>34 года</h4>
+              <b>1 000$</b>
               <p>Краткое содержание описания вакансии...</p>
               <div class="tags">
-                <span class="tag">Тег1</span>
-                <span class="tag">Тег2</span>
+                <span class="tag">Предложили работу, решает</span>
               </div>
             </div>
-            <a href="#" class="apply-btn">Подробнее</a>
+            <a href="option.html" class="apply-btn">Подробнее</a>
           </div>
         </li>
         
@@ -84,6 +104,6 @@
       <p>&copy; 2024 Подбор персонала</p>
     </footer>
     <script src="js/theme-toggle.js"></script>
-    <script src="js/filter-sort.js"></script>
+    <script src="js/carousel.js"></script>
   </body>
   </html>
