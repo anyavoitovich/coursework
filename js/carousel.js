@@ -1,18 +1,37 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const carousels = document.querySelectorAll('.carousel');
+// Получаем элементы слайдера
+const slider = document.querySelector('.slider');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+const slides = Array.from(slider.querySelectorAll('img'));
+const slideCount = slides.length;
+let slideIndex = 0;
 
-    carousels.forEach(carousel => {
-        const slides = carousel.querySelectorAll('.carousel-slide');
-        let counter = 0;
+// Устанавливаем обработчики событий для кнопок
+prevButton.addEventListener('click', showPreviousSlide);
+nextButton.addEventListener('click', showNextSlide);
 
-        setInterval(() => {
-            carousel.style.transition = 'transform 0.5s ease';
-            carousel.style.transform = 'translateX(' + (-counter * 100) + '%)';
-            counter++;
+// Функция для показа предыдущего слайда
+function showPreviousSlide() {
+  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+  updateSlider();
+}
 
-            if (counter === slides.length) {
-                counter = 0;
-            }
-        }, 5000); // Change slide every 5 seconds
-    });
-});
+// Функция для показа следующего слайда
+function showNextSlide() {
+  slideIndex = (slideIndex + 1) % slideCount;
+  updateSlider();
+}
+
+// Функция для обновления отображения слайдера
+function updateSlider() {
+  slides.forEach((slide, index) => {
+    if (index === slideIndex) {
+      slide.style.display = 'block';
+    } else {
+      slide.style.display = 'none';
+    }
+  });
+}
+
+// Инициализация слайдера
+updateSlider();

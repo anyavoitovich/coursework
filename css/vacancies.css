@@ -10,22 +10,67 @@ main {
     grid-template-columns: minmax(200px, 25%) auto; /* Фильтры занимают минимум 200px, максимум 25% доступной ширины, вакансии занимают оставшееся пространство */
     gap: 20px; /* Отступ между столбцами */
     justify-items: stretch; /* Равномерно растягиваем контент по всей ширине столбцов */
-    padding: 0 20px;
+    padding: 20px 20px;
 }
-
+.sort {
+    display: flex;
+    margin-bottom: 20px;
+}
 .filters {
     width: 100%; /* Чтобы фильтры занимали всю доступную ширину */
     max-width: 200px; /* Максимальная ширина фильтров */
 }
+.search-container2 {
+    text-align: center;
+    background-color: #fffddc;
+    margin-bottom: 20px;
+    display: flex; /* Добавляем flex-контейнер */
+    justify-content: center; /* Выравниваем по центру по горизонтали */
+    align-items: center; /* Выравниваем по центру по вертикали */
+    padding-top: 2%;
+    padding-left: 100%;
+    padding-right: 100%;
+    padding-bottom: 2%;
+}
 
+.search-container2 input[type="text"] {
+    padding: 10px;
+    width: 500px;
+    margin-right: 10px;
+    border-radius: 20px; /* Закругляем углы */
+    border: 1px solid #ccc; /* Добавляем рамку */
+}
 
+.search-container2 button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 20px; /* Закруглим границы поисковой строки и кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-container2 button:hover {
+    background-color: #ffc800;
+}
+select {
+border: none;
+padding: 0%;
+margin: 10px;
+}
+select:hover {
+    border: none;
+    background-color: #ffcc00;
+}
 .filters h3 {
     margin-bottom: 10px;
 }
 
 .vacancy-list {
     list-style-type: none;
-    width: 100%; /* Чтобы список вакансий занимал всю доступную ширину */
+    width: 1000px; /* Чтобы список вакансий занимал всю доступную ширину */
 }
 
 .vacancy-list li {
@@ -37,7 +82,11 @@ main {
     color: #333;
     transition: color 0.3s ease;
 }
-
+.vacancy-list h5 {
+    font: arial;
+    color: #649f5d;
+    
+}
 .vacancy-list a:hover {
     color: #ffcc00;
 }
@@ -63,7 +112,15 @@ footer {
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
     /* Тень */
 }
+.sign {
 
+    align-items: center;
+    border: 1px solid #aaaaaa;
+    border-radius: 15px;
+    padding: 10px;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
 .vacancy img {
     max-width: 100%;
     border-radius: 5px;
@@ -81,6 +138,10 @@ footer {
     font-family: monospace;
     color: #454545;
 }
+.sign h4 {
+    font-family: monospace;
+    color: #454545;
+}
 .vacancy p {
     margin-bottom: 10px;
 }
@@ -91,7 +152,7 @@ footer {
 
 .vacancy .tag {
     display: inline-block;
-    background-color: #fff586;
+    background-color: #fffde5;
     color: #333333;
     padding: 3px 8px;
     border-radius: 7px;
@@ -150,20 +211,43 @@ footer {
     }
 }
 
-.carousel {
-    display: flex;
+
+.slider-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
     overflow: hidden;
-    max-width: 150px; /* Ширина фото */
-    height: 150px;
-    margin-right: 10px; /* Отступ между фото и текстом */
-}
-
-.carousel-slide {
-    min-width: 100%;
-    transition: transform 0.5s ease;
-}
-
-.carousel img {
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider img {
     width: 100%;
-    height: auto;
-}
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }

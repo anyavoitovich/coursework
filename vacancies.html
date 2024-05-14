@@ -18,25 +18,14 @@
   </header>
   
   <main>
-
+    <div class="search-container2">
+      <input type="text" placeholder="Поиск...">
+      <button onclick="window.location.href='vacancies.html'">Найти вакансии</button>
+    </div>
+    
     <div class="container">
+
       <div class="filters">
-        <h3>Фильтры</h3>
-        <label for="filterType">Тип:</label>
-        <select id="filterType">
-          <option value="all">Все</option>
-          <option value="full-time">Полная занятость</option>
-          <option value="part-time">Частичная занятость</option>
-          <option value="remote">Удаленная работа</option>
-        </select>
-        
-        <label for="filterLocation">Местоположение:</label>
-        <select id="filterLocation">
-          <option value="all">Любое</option>
-          <option value="moscow">Москва</option>
-          <option value="saint-petersburg">Санкт-Петербург</option>
-          <option value="other">Другой город</option>
-        </select>
         <h2>Регион</h2>
         <label><input type="checkbox" name="region" value="Москва"> Москва (2 550 956)</label><br>
         <label><input type="checkbox" name="region" value="Московская область"> Московская область (658 448)</label><br>
@@ -56,28 +45,120 @@
         <label><input type="radio" name="relocation" value="Не_живут_но_готовы_переехать_в_регион"> Не живут, но готовы переехать в регион</label><br>
 
         <!-- Другие параметры и категории могут быть добавлены здесь -->
+        <h2>Статус поиска</h2>
+        <label><input type="radio" name="search_status" value="Без_статуса_поиска"> Без статуса поиска</label><br>
+        <label><input type="radio" name="search_status" value="Не_ищет_работу"> Не ищет работу</label><br>
+        <label><input type="radio" name="search_status" value="Рассматривает_предложения"> Рассматривает предложения</label><br>
+        <label><input type="radio" name="search_status" value="Активно_ищет_работу"> Активно ищет работу</label><br>
+        <label><input type="radio" name="search_status" value="Предложили_работу_решает"> Предложили работу, решает</label><br>
+        <label><input type="radio" name="search_status" value="Вышел_на_новое_место"> Вышел на новое место</label><br>
+
+        <h2>Возраст, в годах</h2>
+        <label><input type="checkbox" name="age" value="Указан_возраст"> Указан возраст</label><br>
+
+        <h2>Тип занятости</h2>
+        <label><input type="checkbox" name="employment_type" value="Полная_занятость"> Полная занятость</label><br>
+        <label><input type="checkbox" name="employment_type" value="Частичная_занятость"> Частичная занятость</label><br>
+        <label><input type="checkbox" name="employment_type" value="Проектная_работа"> Проектная работа</label><br>
+        <label><input type="checkbox" name="employment_type" value="Стажировка"> Стажировка</label><br>
+        <label><input type="checkbox" name="employment_type" value="Волонтерство"> Волонтерство</label><br>
+
+        <h2>График работы</h2>
+        <label><input type="checkbox" name="work_schedule" value="Полный_день"> Полный день</label><br>
+        <label><input type="checkbox" name="work_schedule" value="Сменный_график"> Сменный график</label><br>
+        <label><input type="checkbox" name="work_schedule" value="Гибкий_график"> Гибкий график</label><br>
+        <label><input type="checkbox" name="work_schedule" value="Удаленная_работа"> Удаленная работа</label><br>
+        <label><input type="checkbox" name="work_schedule" value="Вахтовый_метод"> Вахтовый метод</label><br>
+
+        <h2>Опыт работы</h2>
+        <label><input type="checkbox" name="experience" value="Более_6_лет"> Более 6 лет</label><br>
+        <label><input type="checkbox" name="experience" value="Нет_опыта"> Нет опыта</label><br>
+        <label><input type="checkbox" name="experience" value="От_3_до_6_лет"> От 3 до 6 лет</label><br>
+        <label><input type="checkbox" name="experience" value="От_1_года_до_3_лет"> От 1 года до 3 лет</label><br>
+
+        <h2>Пол</h2>
+        <label><input type="checkbox" name="gender" value="Мужской"> Мужской (1 412 003)</label><br>
+        <label><input type="checkbox" name="gender" value="Женский"> Женский (1 118 615)</label><br>
+        <label><input type="checkbox" name="gender" value="Не_имеет_значения"> Не имеет значения (2 550 956)</label><br>
+
+        <h2>Уровень дохода</h2>
+        <label><input type="checkbox" name="income_level" value="Указан_доход"> Указан доход</label><br>
+
+        <h2>Другие параметры</h2>
+        <label><input type="checkbox" name="other" value="Есть_фото"> Есть фото (927 345)</label><br>
+        <label><input type="checkbox" name="other" value="Есть_автомобиль"> Есть автомобиль (294 308)</label><br>
+
+        <h2>Образование</h2>
+        <label><input type="checkbox" name="education" value="Высшее"> Высшее (1 347 015)</label><br>
+        <label><input type="checkbox" name="education" value="Среднее_специальное"> Среднее специальное (502 767)</label><br>
+        <label><input type="checkbox" name="education" value="Незаконченное_высшее"> Незаконченное высшее (345 497)</label><br>
+        <label><input type="checkbox" name="education" value="Среднее"> Среднее (218 327)</label><br>
+        <label><input type="checkbox" name="education" value="Бакалавр"> Бакалавр (72 796)</label><br>
       </div>
       
       <ul class="vacancy-list">
         <li>
+          <h2>Найдено 11 480 167 резюме у 8 874 713 соискателей</h2>
+        </li>
+        <li>
+          <div class="sign">
+            <b>Чтобы видеть все резюме — зарегистрируйтесь</b>
+            <h4>После регистрации покажем ещё 8 909 789 и откроем фото</h4>
+          </div>
+        </li>
+        <li>
+          <div class="sort">
+            <!-- Переместите элементы сортировки вверх -->
+            <select id="sortSelect">
+              <option value="default">За всё время</option>
+              <option value="name">За сутки</option>
+              <option value="date">За последние 3 дня</option>
+              <option value="date">За неделю</option>
+              <option value="date">За месяц</option>
+              <option value="date">За год</option>
+            
+            </select>
+            <select id="filterType">
+              <option value="all">По соответствию</option>
+              <option value="full-time">По убыванию зарплат</option>
+              <option value="part-time">По возрастанию зарплаты</option>
+              
+            </select>
+            <select id="filterType">
+              <option value="all">20 резюме</option>
+              <option value="full-time">50 резюмк</option>
+              <option value="part-time">70 резюме</option>
+              <option value="remote">100 резюме</option>
+            </select>
+          </div>
+        </li>
+        <li>
           <div class="vacancy">
-            <div class="carousel">
-              <div class="carousel-slide">
+            
+             <div class="slider-container">
+                <div class="slider">
                   <img src="img/1.jpeg" alt="Image 1">
-              </div>
-              <div class="carousel-slide">
                   <img src="img/2.jpg" alt="Image 2">
+                  <img src="img/3.jpg" alt="Image 3">
+                  <img src="img/4.jpg" alt="Image 4">
+                </div>
+                <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+                <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
               </div>
-          </div>          
+       
             <div class="info">
+              <h5>Был на сайте сегодня в 22:27 • Обновлено 14 мая в 22:28</h5>
               <h2>менеджер по продажам</h2>
               <h4>34 года</h4>
               <b>1 000$</b>
-              <p>Краткое содержание описания вакансии...</p>
+              <a>Опыт работы: 16 лет 5 месяцев</a>
+              <hr>
+              <a>Последнее место работы: ГКУ ЦЗН города Москвы • Ведущий инспектор Сентябрь 2009 — Август 2017</a>
               <div class="tags">
                 <span class="tag">Предложили работу, решает</span>
               </div>
             </div>
+
             <a href="option.html" class="apply-btn">Подробнее</a>
           </div>
         </li>
@@ -86,7 +167,7 @@
           <div class="vacancy">
             <img src="vacancy2.jpg" alt="Вакансия 2">
             <div class="info">
-              <h2>Вакансия 2</h2>
+              <a>Вакансия 2</a>
               <p>Краткое содержание описания вакансии...</p>
               <div class="tags">
                 <span class="tag">Тег3</span>
