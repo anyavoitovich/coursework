@@ -29,8 +29,12 @@
 .sort {
     display: flex;
     margin-bottom: 20px;
+    background-color: #eee;
 }
+.sort select {
 
+    background-color: #eee;
+}
 .search-container2 {
     grid-area: search-container2;
     text-align: center;
@@ -97,7 +101,7 @@ select:hover {
 .vacancy-list h5 {
     text-decoration: none;
     font: Verdana, Geneva, sans-serif;
-    color: #649f5d;
+    color: #7c9423;
     
 }
 .vacancy-list a:hover {
@@ -145,7 +149,7 @@ footer {
 
 .vacancy h2 {
     margin-top: 0;
-    color: rgb(61, 105, 192);
+    color: #ffcc00;
 }
 .vacancy h4 {
     font-family: monospace;
@@ -172,7 +176,36 @@ footer {
     margin-right: 5px;
     font-size: 11px;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+}
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.create-vacancy {
+    border: 1px solid #ffcc00; /* Задаем однотонную границу толщиной 2px */
+    border-radius: 20px;
+    color: #ffcc00;
+    background-color: transparent; /* Прозрачный фон */
+    padding: 7px;
+}
+.create-vacancy:hover {
+    color: #000000;
+    background-color:#ffcc00;
+    border-color: #ffcc00;
+}
+.wrapper{
+    flex-grow: 1;
+}
+
+.open{
+    display: flex !important;
+}
 .navbar {
     display: flex;
     flex-direction: column;
@@ -267,3 +300,283 @@ footer {
     right: 0;
   }
   
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    background-color: #333;
+    color: #FAF6F2;
+    padding: 0 40px;
+}
+
+.logo{
+    display: flex;
+    font-size: large;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ffcc00;
+    width: 50px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+}
+.header a {
+    text-decoration: none; /* Убираем подчёркивание для ссылки */
+}
+.nav{
+    display: flex;
+    width: 700px;
+    padding: 0 40px;
+    align-items: center;
+}
+
+.nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav a:hover {
+    color: #ffcc00;
+}
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span{
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #FAF6F2;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0 }
+
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+/* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
+@media (max-width: 900px) {
+
+    .burger { display: flex }
+
+    .nav{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: black;
+        animation: burgerAnimation 0.4s;
+    }
+
+    .nav ul{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+footer {
+    padding: 50px;
+}
+.footer-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto  auto auto;
+    grid-template-areas: 
+        "buttons-1 buttons-2 map"
+        "buttons-3 buttons-3 buttons-3"
+        "down-footer2 down-footer2 down-footer2"
+        "down-footer down-footer down-footer"
+        ;
+}
+.buttons-1 {
+    grid-area: buttons-1;
+    text-align: left;
+}
+.buttons-1 a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 11px;
+    font-size: 16px;
+}
+
+.buttons-1 a:hover {
+    color: #ffcc00;
+}
+
+.buttons-2 {
+    grid-area: buttons-2;
+    text-align: left;
+}
+.buttons-2 a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 11px;
+    font-size: 16px;
+}
+
+.buttons-2 a:hover {
+    color: #ffcc00;
+}
+.map {
+    grid-area: map;
+    border-radius: 10px;
+    overflow: hidden;
+   
+}
+
+
+.buttons-3  {
+    margin-top: 50px;
+    grid-area: buttons-3;
+    display: flex;
+    justify-content: flex-start;
+    
+    
+}
+
+.buttons-3 a,
+.buttons-3 h5 {
+    display: inline;
+    
+     /* Устанавливаем элементы в строчку */
+    margin-right: 10px; /* Добавляем небольшой отступ между элементами */
+}
+
+.buttons-3 a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    font-size: 13px;
+
+}
+
+.buttons-3 a:hover {
+    color: #ffcc00;
+}
+.down-footer {
+    grid-area: down-footer;
+    margin: 0;
+    padding: 0;
+    color: #ffcc00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.down-footer a {
+    color: #ffcc00;
+}
+.down-footer2 {
+    grid-area: down-footer2;
+    margin: 0px;
+
+    text-align: left; /* Выравнивание текста по левой стороне */
+}
+
+.down-footer2 p {
+    display: inline;
+    font-size: 13px;
+    color: #ffffff;
+}
+.down-footer h5 {
+
+    padding-top: 20px;
+
+}
+.aside-grid {
+    display: grid;
+    align-items: start;
+    background-color: #aaaaaa;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "example example2 example3"
+   ;
+}
+.example{
+    grid-area: example;
+}
+.example p {
+    color: #ffcc00;
+    font-size: 16px;
+}
+.example p1 {
+    color: #5d5d5d;
+    font-size: 14px;
+
+}
+.example2 {
+    grid-area: example2;
+}
+.example2 p {
+    color: #ffcc00;
+    font-size: 16px;
+}
+.example2 p1 {
+    color: #5d5d5d;
+    font-size: 14px;
+
+}
+.example3 {
+    grid-area: example3;
+}
+.example3 p {
+    color: #ffcc00;
+    font-size: 16px;
+}
+.example3 p1 {
+    color: #5d5d5d;
+    font-size: 14px;
+
+}

@@ -7,13 +7,37 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Подбор персонала</h1>
-    <label class="switch">
-      <input id="themeToggle" type="checkbox" onclick="toggleTheme()">
-      <span class="slider round"></span>
-    </label>
-  </header>
+  <div class="wrapper">
+    <header class="header">
+        <!-- Шапка -->
+        <a href="index.html">
+          <div class="logo">
+              <span>W</span>
+          </div>
+        </a>
+
+        <!-- Меню сайта -->
+        <nav class="nav">
+          <ul>
+            <a class="price">Прайс-лист</a>
+            <a>Помощь</a>
+            <a>Поиск</a>
+            <button class="create-vacancy">Разместить вакансию</button>
+            <a>Зарегистироаться</a>
+            <a>Войти</li>
+            <a>
+              <label class="switch">
+                <input id="themeToggle" type="checkbox" onclick="toggleTheme()">
+                <span class="slider round"></span>
+              </label>
+            </a>
+          </ul>
+        </nav>
+        <div class="burger">
+          <span></span>
+        </div>
+    </header>
+</div>
   
   <main>
     <div class="search-container">
@@ -22,9 +46,81 @@
     </div>
   </main>
   
-  <footer>
-    <p>&copy; 2024 Подбор персонала</p>
-  </footer>
+  <aside class="aside-grid">
+    <div class="example">
+      <p>Повысим эффективность HR-команды</p>
+      <p1>Подключайте HR-аутсорсинг для сложных 
+        вакансий и найма в регионах</p1>
+    </div>
+    <div class="example2">
+      <p>Станьте заметнее для ИТ-кандидатов</p>
+      <p1>Рассказывайте о ваших технологиях 
+        и проектах на WWW.by</p1>
+    </div>
+    <div class="example3">
+      <p>Настройте воронку подбора в Talantix
+      </p>
+      <p1>Управляйте этапами, назначайте собеседования, добавляйте заказчиковy</p1>
+    </div>
+  </aside>
+    
+    <footer class="footer-grid">
+      <div class="buttons-1">
+        <a href="#">О компании</a>
+        <a href="#">Наши вакансии</a>
+        <a href="#">Партнерам</a>
+        <a href="#">Реклама на сайте</a>
+        <a href="#">Новости и статьи</a>
+        <a href="#">Инвесторам</a>
+        <a href="#">Кандидаты по профессиям</a>
+      </div>
+      <div class="buttons-2">
+        <a href="#">Производственный календарь</a>
+        <a href="#">Требования к ПО</a>
+        <a href="#">Безопасный HeadHunter</a>
+        <a href="#">HeadHunter API</a>
+        <a href="#">Поиск работы</a>
+      </div>
+      <div class="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5c5954259b83a2bd42a7535d027ce8216cbbf08d69357ec7cbd87e82f2376209&amp;width=550&amp;height=300&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+      <br>
+      <div class="buttons-3">
+        
+        <a href="#">Этика и комплаенc</a>
+        <h5>•</h5>
+        <a href="#">Оказание услуг</a>
+        <h5>•</h5>
+        <a href="#">Использование сайтов</a>
+        <h5>•</h5>
+        <a href="#">Защита персональных данных</a>
+        
+      </div>
+      <div class="down-footer2">
+        
+        <p>На информационном ресурсе hh.ru применяются рекомендательные технологии (информационные технологии предоставления информации на основе сбора, систематизации и анализа сведений, относящихся к предпочтениям пользователей сети «Интернет», находящихся на территории Российской Федерации)</p>
+        
+      </div>
+      <div class="down-footer">
+        <hr>
+        <p>© 2024 ООО «WWW»</p>
+        <a href="https://www.instagram.com/uvviiin/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </svg></a>
+        <a href="https://www.tiktok.com/@pipipoopoopipi?_t=8mNd02DGCY9&_r=1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+          <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+        </svg></a>
+        <a 
+        <a href=”tel:+380441234567”>+38 (044) 123-45-67</a>
+      </div>
+    </footer>
+    <script src="js/theme-toggle.js"></script>
+    <script>
+      document.querySelector('.burger').addEventListener('click', function() {
+          this.classList.toggle('active');
+          document.querySelector('.nav').classList.toggle('open');
+      })
+    </script>
   <script src="js/theme-toggle.js"></script>
 </body>
 

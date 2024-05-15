@@ -68,6 +68,12 @@ body {
 .option3 {
     grid-area: option3;
 }
+.option4 {
+    grid-area: option4;
+}
+.option5 {
+    grid-area: option5;
+}
 main {
     width: 100vw; /* Растягиваем на весь экран по ширине */
 
@@ -102,6 +108,16 @@ main {
     color: #5d5d5d;
     font-size: 12px;
 }
+.data3 p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #5d5d5d;
+    font-size: 12px;
+}
+.data4 p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #5d5d5d;
+    font-size: 12px;
+}
 .expiriance3 p { 
     color: #000000;
     font-size: 14px;
@@ -116,6 +132,24 @@ main {
     font-size: 14px;
 }
 .expiriance4 h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    font-size: 20px;
+}
+.expiriance5 p { 
+    color: #000000;
+    font-size: 14px;
+}
+.expiriance5 h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    font-size: 20px;
+}
+.expiriance6 p { 
+    color: #000000;
+    font-size: 14px;
+}
+.expiriance6 h4 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #000000;
     font-size: 20px;
@@ -143,16 +177,56 @@ main {
     gap: 20px;
     /* padding: 40px; */
     grid-template-columns: 100px 1fr;
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
     grid-template-areas: 
     "expiriance-title expiriance-title"
     "data expiriance"
     "data oexpiriance2"
     "data2 expiriance3"
-    "data2 oexpiriance4";
+    "data2 oexpiriance4"
+    "expiriance-title2 expiriance-title2"
+    "tags2 tags2"
+    "expiriance-title3 expiriance-title3"
+    "option4 option4"
+    "expiriance-title4 expiriance-title4"
+    "option5 option5"
+    "expiriance-title5 expiriance-title5"
+    "data3 expiriance5"
+    "expiriance-title6 expiriance-title6"
+    "tags3 tags3"
+    "expiriance-title7 expiriance-title7"
+    "data4 expiriance6";
 }
 .expiriance-title {
     grid-area: expiriance-title;
+    
+    color: #737373;
+}
+.expiriance-title2 {
+    grid-area: expiriance-title2;
+    
+    color: #737373;
+}
+.expiriance-title3 {
+    grid-area: expiriance-title3;
+    
+    color: #737373;
+}
+.expiriance-title4 {
+    grid-area: expiriance-title4;
+    
+    color: #737373;
+}
+.expiriance-title5 {
+    grid-area: expiriance-title5;
+    color: #737373;
+}
+.expiriance-title6 {
+    grid-area: expiriance-title6;
+    color: #737373;
+}
+.expiriance-title7 {
+    grid-area: expiriance-title7;
     
     color: #737373;
 }
@@ -168,11 +242,24 @@ main {
 .exexpiriance4 {
     grid-area: expiriance4;
 }
+.exexpiriance5 {
+    grid-area: expiriance4;
+}
+
+.exexpiriance6 {
+    grid-area: expiriance4;
+}
 .data {
     grid-area: data;
 }
 .data2 {
     grid-area: data2;
+}
+.data3 {
+    grid-area: data3;
+}
+.data4 {
+    grid-area: data4;
 }
 .imag-grid {
     grid-area: imag-grid;
@@ -187,7 +274,14 @@ main {
     margin-top: 5px;
     margin-bottom: 10px;
 }
+.tags2 {
+    margin-bottom: 10px;
+    grid-area: tags2;
+}
+.tags3 {
 
+    grid-area: tags3;
+}
 .tag {
     display: inline-block;
     background-color: #fffde5;
@@ -221,7 +315,7 @@ main {
     color: white;
     text-decoration: none;
 }
-.logo span {
+.header a {
     text-decoration: none; /* Убираем подчёркивание для ссылки */
 }
 .nav{
@@ -322,10 +416,11 @@ footer {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr auto  auto;
+    grid-template-rows: 1fr auto  auto auto;
     grid-template-areas: 
         "buttons-1 buttons-2 map"
         "buttons-3 buttons-3 buttons-3"
+        "down-footer2 down-footer2 down-footer2"
         "down-footer down-footer down-footer"
         ;
 }
@@ -339,6 +434,7 @@ footer {
     transition: color 0.3s ease;
     display: block;
     margin-bottom: 11px;
+    font-size: 16px;
 }
 
 .buttons-1 a:hover {
@@ -355,6 +451,7 @@ footer {
     transition: color 0.3s ease;
     display: block;
     margin-bottom: 11px;
+    font-size: 16px;
 }
 
 .buttons-2 a:hover {
@@ -382,13 +479,14 @@ footer {
     display: inline;
     
      /* Устанавливаем элементы в строчку */
-    margin-right: 5px; /* Добавляем небольшой отступ между элементами */
+    margin-right: 10px; /* Добавляем небольшой отступ между элементами */
 }
 
 .buttons-3 a {
     text-decoration: none;
     color: #ffffff;
     transition: color 0.3s ease;
+    font-size: 13px;
 
 }
 
@@ -399,5 +497,77 @@ footer {
     grid-area: down-footer;
     margin: 0px;
     padding: 0px;
+    color: #ffcc00;
+
+}
+.down-footer a{
+    padding: 20px;
+    color: #ffcc00;
+
+}
+.down-footer2 {
+    grid-area: down-footer2;
+    margin: 0px;
+
+    text-align: left; /* Выравнивание текста по левой стороне */
 }
 
+.down-footer2 p {
+    display: inline;
+    font-size: 13px;
+    color: #ffffff;
+}
+.down-footer h5 {
+
+    padding-top: 20px;
+
+}
+.aside-grid {
+    display: grid;
+    align-items: start;
+    background-color: #aaaaaa;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "example example2 example3"
+   ;
+}
+.example{
+    grid-area: example;
+}
+.example p {
+    color: #ffcc00;
+    font-size: 16px;
+}
+.example p1 {
+    color: #5d5d5d;
+    font-size: 14px;
+
+}
+.example2 {
+    grid-area: example2;
+}
+.example2 p {
+    color: #ffcc00;
+    font-size: 16px;
+}
+.example2 p1 {
+    color: #5d5d5d;
+    font-size: 14px;
+
+}
+.example3 {
+    grid-area: example3;
+}
+.example3 p {
+    color: #ffcc00;
+    font-size: 16px;
+}
+.example3 p1 {
+    color: #5d5d5d;
+    font-size: 14px;
+
+}
