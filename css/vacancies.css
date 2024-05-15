@@ -3,11 +3,11 @@
     display: grid;
     height: 100%;
     gap: 20px;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 1fr 200px;
     grid-template-rows: 100px 1fr;
     grid-template-areas: 
         "search-container2 search-container2"
-        "filters content"
+        "content filters"
         ;
 }
 
@@ -21,6 +21,7 @@
  .filters {
    /* background-color: aquamarine; */
     grid-area: filters;
+    color: #000000;
 
 }
 
@@ -101,7 +102,7 @@ select:hover {
 .vacancy-list h5 {
     text-decoration: none;
     font: Verdana, Geneva, sans-serif;
-    color: #7c9423;
+    color: #757575;
     
 }
 .vacancy-list a:hover {
@@ -118,12 +119,13 @@ footer {
 .vacancy {
     display: grid;
     grid-template-columns: auto 1fr; /* Фото слева, текст справа */
-    align-items: center;
+    
     border: 1px solid #aaaaaa;
     border-radius: 15px;
     padding: 10px;
-    max-width: 1000px;
+    max-width: 100vw;
     margin-bottom: 20px;
+    align-items: start;
     /* background-color: #fff;  */
     /* Белый фон внутри рамки */
     /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
@@ -174,14 +176,25 @@ footer {
     padding: 3px 8px;
     border-radius: 7px;
     margin-right: 5px;
-    font-size: 11px;
+    font-size: 13px;
 }
 body {
     display: flex;
     flex-direction: column;
     background-color: #eee;
+    width: 100vw;
 }
+main {
+    width: 100vw; /* Растягиваем на весь экран по ширине */
 
+
+}
+i {
+    color: #7d7d7d;
+}
+label {
+    font-size: 12px;
+}
 *{
     padding: 0;
     margin: 0;
@@ -205,23 +218,6 @@ body {
 
 .open{
     display: flex !important;
-}
-.navbar {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff; /* белый цвет для верхней части навбара */
-}
-
-.navbar-top {
-    display: flex;
-    justify-content: space-around;
-    background-color: #fff; /* белый цвет для верхней части навбара */
-}
-
-.navbar-bottom {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333; /* темно-серый цвет для нижней части навбара */
 }
 
 .animated-button {
@@ -272,8 +268,8 @@ body {
   }
   
   .carousel-item img {
-    width: 120px; /* Автоматическое определение ширины */
-    height: 150px; /* Фиксированная высота */
+    width: 150px; /* Автоматическое определение ширины */
+    height: 180px; /* Фиксированная высота */
     object-fit: cover;
   }
   
