@@ -18,12 +18,14 @@
   </header>
   
   <main>
-    <div class="search-container2">
-      <input type="text" placeholder="Поиск...">
-      <button onclick="window.location.href='vacancies.html'">Найти вакансии</button>
-    </div>
     
-    <div class="container">
+    
+    <div class="grid-container">
+     
+      <div class="search-container2">
+        <input type="text" placeholder="Поиск...">
+        <button onclick="window.location.href='vacancies.html'">Найти вакансии</button>
+      </div>
 
       <div class="filters">
         <h2>Регион</h2>
@@ -95,104 +97,106 @@
         <label><input type="checkbox" name="education" value="Среднее"> Среднее (218 327)</label><br>
         <label><input type="checkbox" name="education" value="Бакалавр"> Бакалавр (72 796)</label><br>
       </div>
-      
-      <ul class="vacancy-list">
-        <li>
-          <h2>Найдено 11 480 167 резюме у 8 874 713 соискателей</h2>
-        </li>
-        <li>
-          <div class="sign">
-            <b>Чтобы видеть все резюме — зарегистрируйтесь</b>
-            <h4>После регистрации покажем ещё 8 909 789 и откроем фото</h4>
-          </div>
-        </li>
-        <li>
-          <div class="sort">
-            <!-- Переместите элементы сортировки вверх -->
-            <select id="sortSelect">
-              <option value="default">За всё время</option>
-              <option value="name">За сутки</option>
-              <option value="date">За последние 3 дня</option>
-              <option value="date">За неделю</option>
-              <option value="date">За месяц</option>
-              <option value="date">За год</option>
-            
-            </select>
-            <select id="filterType">
-              <option value="all">По соответствию</option>
-              <option value="full-time">По убыванию зарплат</option>
-              <option value="part-time">По возрастанию зарплаты</option>
+      <div class="content">
+        <ul class="vacancy-list">
+          <li>
+            <h2>Найдено 11 480 167 резюме у 8 874 713 соискателей</h2>
+          </li>
+          <li>
+            <div class="sign">
+              <b>Чтобы видеть все резюме — зарегистрируйтесь</b>
+              <h4>После регистрации покажем ещё 8 909 789 и откроем фото</h4>
+            </div>
+          </li>
+          <li>
+            <div class="sort">
+              <!-- Переместите элементы сортировки вверх -->
+              <select id="sortSelect">
+                <option value="default">За всё время</option>
+                <option value="name">За сутки</option>
+                <option value="date">За последние 3 дня</option>
+                <option value="date">За неделю</option>
+                <option value="date">За месяц</option>
+                <option value="date">За год</option>
               
-            </select>
-            <select id="filterType">
-              <option value="all">20 резюме</option>
-              <option value="full-time">50 резюмк</option>
-              <option value="part-time">70 резюме</option>
-              <option value="remote">100 резюме</option>
-            </select>
-          </div>
-        </li>
-        <li>
-          <div class="vacancy">
-            
-            <div class="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item">
-                  <img src="img/1.jpeg" alt="Image 1">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/2.jpg" alt="Image 2">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/3.jpg" alt="Image 3">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/4.jpg" alt="Image 4">
-                </div>
-              </div>
-              <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-              <button class="next" onclick="plusSlides(1)">&#10095;</button>
+              </select>
+              <select id="filterType">
+                <option value="all">По соответствию</option>
+                <option value="full-time">По убыванию зарплат</option>
+                <option value="part-time">По возрастанию зарплаты</option>
+                
+              </select>
+              <select id="filterType">
+                <option value="all">20 резюме</option>
+                <option value="full-time">50 резюмк</option>
+                <option value="part-time">70 резюме</option>
+                <option value="remote">100 резюме</option>
+              </select>
             </div>
-            
-       
-            <div class="info">
-              <h5>Был на сайте сегодня в 22:27 • Обновлено 14 мая в 22:28</h5>
-              <h2>менеджер по продажам</h2>
-              <h4>34 года</h4>
-              <b>1 000$</b>
-              <a>Опыт работы: 16 лет 5 месяцев</a>
-              <hr>
-              <a>Последнее место работы: ГКУ ЦЗН города Москвы • Ведущий инспектор Сентябрь 2009 — Август 2017</a>
-              <div class="tags">
-                <span class="tag">Предложили работу, решает</span>
+          </li>
+          <li>
+            <div class="vacancy">
+              
+              <div class="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item">
+                    <img src="img/1.jpeg" alt="Image 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/2.jpg" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/3.jpg" alt="Image 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/4.jpg" alt="Image 4">
+                  </div>
+                </div>
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
               </div>
-            </div>
-
-            <a href="option.html" class="apply-btn">Подробнее</a>
-          </div>
-        </li>
+              
         
-        <li>
-          <div class="vacancy">
-            <img src="vacancy2.jpg" alt="Вакансия 2">
-            <div class="info">
-              <a>Вакансия 2</a>
-              <p>Краткое содержание описания вакансии...</p>
-              <div class="tags">
-                <span class="tag">Тег3</span>
-                <span class="tag">Тег4</span>
+              <div class="info">
+                <h5>Был на сайте сегодня в 22:27 • Обновлено 14 мая в 22:28</h5>
+                <h2>менеджер по продажам</h2>
+                <h4>34 года</h4>
+                <b>1 000$</b>
+                <a>Опыт работы: 16 лет 5 месяцев</a>
+                <hr>
+                <a>Последнее место работы: ГКУ ЦЗН города Москвы • Ведущий инспектор Сентябрь 2009 — Август 2017</a>
+                <div class="tags">
+                  <span class="tag">Предложили работу, решает</span>
+                </div>
               </div>
+
+              <a href="option.html" class="apply-btn">Подробнее</a>
             </div>
-            <a href="#" class="apply-btn">Подробнее</a>
-          </div>
-        </li>
-      </ul>
-    </div>
+          </li>
+          
+          <li>
+            <div class="vacancy">
+              <img src="vacancy2.jpg" alt="Вакансия 2">
+              <div class="info">
+                <a>Вакансия 2</a>
+                <p>Краткое содержание описания вакансии...</p>
+                <div class="tags">
+                  <span class="tag">Тег3</span>
+                  <span class="tag">Тег4</span>
+                </div>
+              </div>
+              <a href="#" class="apply-btn">Подробнее</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+     </div>
     </main>
-    
-    <footer>
+    <footer class = footer>
       <p>&copy; 2024 Подбор персонала</p>
     </footer>
+   
     <script src="js/theme-toggle.js"></script>
     <script src="js/carousel.js"></script>
   </body>

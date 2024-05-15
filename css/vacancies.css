@@ -1,36 +1,48 @@
-
-main {
-    flex: 1; 
-    display: flex;
-    flex-direction: column; /* Устанавливаем вертикальное расположение элементов */
-    align-items: center;
-}
-.container {
+/* Grid-container ==================================== */
+.grid-container{
     display: grid;
-    grid-template-columns: minmax(200px, 25%) auto; /* Фильтры занимают минимум 200px, максимум 25% доступной ширины, вакансии занимают оставшееся пространство */
-    gap: 20px; /* Отступ между столбцами */
-    justify-items: stretch; /* Равномерно растягиваем контент по всей ширине столбцов */
-    padding: 20px 20px;
+    height: 100%;
+    gap: 20px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 
+        "search-container2 search-container2"
+        "filters content"
+        ;
 }
+
+
+.content {
+    grid-area: content;
+    /* background-color: aquamarine; */
+
+}
+
+ .filters {
+   /* background-color: aquamarine; */
+    grid-area: filters;
+
+}
+
+
+
 .sort {
     display: flex;
     margin-bottom: 20px;
 }
-.filters {
-    width: 100%; /* Чтобы фильтры занимали всю доступную ширину */
-    max-width: 200px; /* Максимальная ширина фильтров */
-}
+
 .search-container2 {
+    grid-area: search-container2;
     text-align: center;
     background-color: #fffddc;
     margin-bottom: 20px;
     display: flex; /* Добавляем flex-контейнер */
     justify-content: center; /* Выравниваем по центру по горизонтали */
     align-items: center; /* Выравниваем по центру по вертикали */
-    padding-top: 2%;
+    /* padding-top: 2%;
     padding-left: 100%;
     padding-right: 100%;
-    padding-bottom: 2%;
+    padding-bottom: 2%; */
 }
 
 .search-container2 input[type="text"] {
@@ -83,7 +95,8 @@ select:hover {
     transition: color 0.3s ease;
 }
 .vacancy-list h5 {
-    font: arial;
+    text-decoration: none;
+    font: Verdana, Geneva, sans-serif;
     color: #649f5d;
     
 }
@@ -235,19 +248,19 @@ footer {
     cursor: pointer;
     position: absolute;
     top: 50%;
+    background-color: #fff8f800;
     transform: translateY(-50%);
     width: auto;
-    padding: 16px;
+    padding: 5px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 6px;
     transition: 0.6s ease;
-    background-color: rgba(0, 0, 0, 0.5);
     border: none;
   }
   
   .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #ffcc00;
   }
   
   .next {
