@@ -59,6 +59,9 @@ body {
     grid-area: option;
     gap: 20px;
 }
+.option p {
+    margin-bottom: 10px; /* Задает отступ снизу для всех элементов <p> внутри .option */
+}
 .option2 {
     grid-area: option2;
 }
@@ -182,6 +185,7 @@ main {
 }
 .tags {
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .tag {
