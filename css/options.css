@@ -3,7 +3,6 @@
 body {
     display: flex;
     flex-direction: column;
-    
     background-color: #eee;
 }
 
@@ -34,7 +33,7 @@ body {
 .registration {
     grid-area: registration;
     background-color: #d7d7d7;
-    width: 80%;
+    width: 100%;
     border-radius: 15px;
     /* margin: 20px; */
     padding: 20px;
@@ -56,26 +55,101 @@ body {
     border: #ffcc00;
     padding: 10px;
 }
-.option-grid {
-    grid-area: option-grid;
+.option {
+    grid-area: option;
+    gap:20px;
+}
+.option2 {
+    grid-area: option2;
+}
+.option3 {
+    grid-area: option3;
 }
 main {
-    min-height: 100vh; /* Растягиваем на весь экран по высоте */
     width: 100vw; /* Растягиваем на весь экран по ширине */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Выравниваем содержимое по центру */
+
+
+}
+
+h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #5d5d5d;
 }
 .main-grid {
     display: grid;
+    align-items: start;
+    justify-content: center;
     gap: 20px;
-    width: 100%;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
+    padding: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
-    "registration"
-    "option-grid"
-    ;
+    "registration registration"
+    "option imag-grid"
+    "option2 option3";
+}
+.text-time {
+    color: #5d5d5d;
+}
+.option-grid {
+    display: grid;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+    /* padding: 40px; */
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: 
+    "expiriance-title expiriance-title"
+    "data expiriance"
+    "data oexpiriance2"
+    "data2 expiriance3"
+    "data2 oexpiriance4";
+}
+.expiriance-title {
+    grid-area: expiriance-title;
+    color: #5d5d5d;
+}
+.exexpiriance {
+    grid-area: expiriance;
+}
+.exexpiriance2 {
+    grid-area: expiriance2;
+}
+.exexpiriance3 {
+    grid-area: expiriance3;
+}
+.exexpiriance4 {
+    grid-area: expiriance4;
+}
+.data {
+    grid-area: data;
+}
+.data2 {
+    grid-area: data2;
+}
+.imag-grid {
+    grid-area: imag-grid;
+}
+.imag-grid img {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+
+}
+.tags {
+    margin-top: 5px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #fffde5;
+    color: #333333;
+    padding: 3px 8px;
+    border-radius: 7px;
+    font: arial;
+    margin-right: 5px;
+    font-size: 14px;
 }
 .header{
     display: flex;
@@ -107,6 +181,7 @@ main {
     display: flex;
     width: 700px;
     padding: 0 40px;
+    align-items: center;
 }
 
 .nav ul{
@@ -114,6 +189,7 @@ main {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .nav a:hover {
     color: #ffcc00;
@@ -277,9 +353,4 @@ footer {
     margin: 0px;
     padding: 0px;
 }
-.down-footer i{
-    background-color: #ffcc00;
-}
-.bi bi-instagram:hover {
-    color: #ffcc00;
-}
+
