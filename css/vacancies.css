@@ -257,7 +257,10 @@ label {
     max-width: 600px; /* Ограничение максимальной ширины слайдера */
     margin: auto;
   }
-  
+  hr {
+    color: #d2d2d2;
+    size: 1px;
+  }
   .carousel-inner {
     position: relative;
     width: 100%;
